@@ -1,0 +1,27 @@
+<div style="display: flex; flex-direction: column; gap: 18px; align-items: center; margin: 72px 0;">
+	<h1>Convert Time Zone</h1>
+
+	<form style="display: flex; flex-direction: column; gap: 8px; align-items: stretch; width: 360px;">
+		<label>
+			Time:
+			<input type="time" required name="time"/>
+		</label>
+		<label>
+			From:
+			<select name="time-zone-from">
+				{% for tz in timeZones %}
+					<option value="{{tz}}">{{tz}}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<label>
+			To:
+			<select name="time-zone-to">
+				{% for tz in timeZones %}
+					<option value="{{tz}}">{{tz}}</option>
+				{% endfor %}
+			</select>
+		</label>
+		<button type="submit">Convert</button>
+	</form>
+</div>
